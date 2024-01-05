@@ -12,7 +12,7 @@ const EditFormation = () => {
     }, [])
 
     return (
-        <div></div>
+        <div>J</div>
     )
 }
 
