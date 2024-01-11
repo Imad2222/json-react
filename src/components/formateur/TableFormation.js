@@ -30,9 +30,7 @@ const TableFormation = () => {
                             <option value="Intermédiaire">Intermédiaire</option>
                             <option value="Avance">Avance</option>
                             <option value="Expert">Expert</option>
-                            <option value="Master">Master</option>
-                            <option value="PhD">PhD</option>
-                            <option value="Doctorat">Doctorat</option>
+                            
                         </Select>
                     </div>
                     <div>

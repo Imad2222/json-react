@@ -1,37 +1,56 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
-const _header = () => {
+const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container py-1">
-                <NavLink className="navbar-brand " to={'/'}>ASFP</NavLink>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div className="container">
+                <Link className="navbar-brand" to={'/'}>
+                    MY APP
+                </Link>
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link mx-5" to={"/"}>Home</NavLink>
+                            <NavLink className="nav-link" to={'/'}>
+                            Accueil
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link mx-5" to={"/table-formation"}>Table Formations</NavLink>
+                            <NavLink className="nav-link" to={'/table-formation'}>
+                                Table Formations
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link mx-5" to={"/table-ustilisateur"}>Table Ustilisateur</NavLink>
+                            <NavLink className="nav-link" to={'/table-ustilisateur'}>
+                                Table Ustilisateur
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link mx-5" to={"/formateur/login"}>Formateur Login</NavLink>
+                            <NavLink className="nav-link" to={'/formateur/login'}>
+                                Formateur Login
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link mx-5" to={"/participant/login"}>Participant Login</NavLink>
+                            <NavLink className="nav-link" to={'/participant/login'}>
+                                Participant Login
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+    );
+};
 
-    )
-}
-
-export default _header
+export default Header;

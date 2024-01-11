@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { axiosClient } from '../api/axiosClient';
 import { useNavigate } from 'react-router-dom';
 
@@ -150,11 +150,12 @@ const ContextApi = ({ children }) => {
 
 
     const inscriFormation = (id) => {
-        if (!user.formations_inscrites.includes(id)) {
-            setUser({ ...user, formations_inscrites: [...user.formations_inscrites, id] });
-            localStorage.setItem('user', JSON.stringify(user));
+        if (!user.formations_enseignees.includes(id)) {
+          setUser({ ...user, formations_enseignees: [...user.formations_enseignees, id] });
+          localStorage.setItem('user', JSON.stringify({ ...user, formations_enseignees: [...user.formations_enseignees, id] }));
         }
-    }
+      };
+      
 
     const deleteFormation = (id) => {
         const confirm = window.confirm("Voulez-vous vraiment supprimer cette formation ?");
@@ -200,7 +201,7 @@ const ContextApi = ({ children }) => {
             {!loading ? children : <>
                 <div className="d-flex justify-content-center">
                     <div className="spinner-border" style={{ width: '20rem', height: '20rem' }} role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden">...</span>
                     </div>
                 </div>
             </>}

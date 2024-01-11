@@ -26,7 +26,7 @@ function App() {
         <Route path='*' element={<h1 className='text-center mt-5'>404</h1>} />
 
         <Route path={'/formateur'} element={<IndexFormatuer />}>
-          <Route index element={<h1 className='text-center mt-5'>Welcome {user?.nom}</h1>} />
+          <Route index element={<h1 className='text-center mt-5'> {user?.nom}  , Welcome to the platform</h1>} />
           <Route path='table-formation' element={<TableFormation />} />
           <Route path='show-formation/:id' element={<ShowFormation />} />
           <Route path='edit-formation/:id' element={<EditFormation />} />
@@ -34,12 +34,12 @@ function App() {
         </Route>
 
         <Route path={'/participant'} element={<IndexParticipant />}>
-          <Route index element={<h1 className='text-center mt-5'>Welcome {user?.nom}</h1>} />
+          <Route index element={<h1 className='text-center mt-5'>{user?.nom} , Welcome to the platform of Formations!</h1>} />
           <Route path='table-formation' element={<TableFormationParticip />} />
         </Route>
 
         <Route path={'/'} element={<IndexGuest />}>
-          <Route index element={<h1 className='text-center mt-5'>Welcome guest</h1>} />
+          <Route index element={<h1 className='text-center mt-5'> HELLO </h1>} />
           <Route path='formateur/login' element={<FormatuerLogin />} />
           <Route path='participant/login' element={<ParticipantLogin />} />
           <Route path='table-formation' element={<TableFormationGuest />} />

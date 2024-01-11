@@ -33,7 +33,7 @@
             "nom": "Alice Dupont",
             "role": "Participant",
             "email": "sgreerd@example.com",
-            "password": "12345678",
+            "password": "11111111",
             "formations_inscrites": [
                 103
             ]
@@ -43,7 +43,7 @@
             "nom": "Jean Martin",
             "role": "Formateur",
             "email": "2h8hT@example.com",
-            "password": "12345678",
+            "password": "11111111",
             "formations_enseignees": [
                 101, 103
             ]
@@ -53,7 +53,7 @@
             "nom": "Marie Curie",
             "role": "Participant",
             "email": "ytdhbrs@example.com",
-            "password": "12345678",
+            "password": "11111111",
             "formations_inscrites": [
                 102
             ]
